@@ -1,0 +1,27 @@
+# -------------------------------------
+# Byte-compiled / optimised / DLL files
+# -------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ----------------------
+# IDE and Personal Tools
+# ---------------------
+.idea
+
+# ------------------------------
+# Code coverage and unit testing
+# ------------------------------
+.coverage
+.coverage.*
+coverage/
+
+# -------------
+# Documentation
+# -------------
+doc/build/
+
+# ----------------
+# Project Specific
+# ----------------
