@@ -1,0 +1,26 @@
+# ----------------------------------
+# Code linter and code quality tools
+# ----------------------------------
+pyenchant
+pylint
+
+# -------------
+# Code Coverage
+# -------------
+coverage
+
+# -------------
+# Documentation
+# -------------
+sphinx
+sphinx_bootstrap_theme
+
+# -----------------------------
+# Project specific dependencies
+# -----------------------------
+# click
+# flask
+# gunicorn
+# matplotlib
+# pandas
+# pyinstaller
