@@ -63,4 +63,3 @@ coverage: test
 	@echo "Building HTML code coverage report"
 	@echo "-------------------------------------------------------"
 	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage html
-	open coverage/html/index.html
