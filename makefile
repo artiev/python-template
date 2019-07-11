@@ -48,10 +48,11 @@ check: .PHONY
 	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m pylint app/main.py
 
 test: clean
-	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage run test/collection_full.py
 	@${PRINT_TITLE_HLINE} "Running All Tests"
 
 	@${PRINT_SUBTITLE_HLINE} "Running all unit tests gathered from the test/ folder"
+	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage run -m pytest test/
+
 	@${PRINT_SUBTITLE_HLINE} "Compiling code coverage statistics"
 	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage report -m
 
