@@ -11,7 +11,7 @@ class TestMainOperations( TestCase ):
     def setUp( self ):
         pass
 
-    def test_returns_properly( self ):
+    def test_main_returns_properly( self ):
         ret = main()
         self.assertTrue( ret )
 

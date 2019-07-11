@@ -1,10 +1,11 @@
-import os
+from os.path import dirname
 from unittest import TestCase
 
 from tools import explorer
 
-PATH_TO_HERE = os.path.dirname( __file__ )
-PATH_TO_TOOLS = os.path.dirname( PATH_TO_HERE ) + '/tools'
+PATH_TO_HERE = dirname( __file__ )
+PATH_TO_TEST = dirname( PATH_TO_HERE )
+PATH_TO_TOOLS = dirname( PATH_TO_TEST ) + '/tools'
 
 
 class TestProjectExplorerLibrary( TestCase ):
@@ -71,14 +72,14 @@ class TestProjectExplorerLibrary( TestCase ):
 
     def test_filtering_directories_by_partial_match( self ):
         dirs = explorer.search_path_for_directories_with_partial_match(
-            path = os.path.dirname( PATH_TO_HERE ),
+            path = dirname( PATH_TO_TEST ),
             partial = 'test'
         )
         self.assertGreaterEqual( len( dirs ), 1 )
-        self.assertTrue( os.path.dirname( __file__ ) in dirs )
+        self.assertTrue( dirname( __file__ ) in dirs )
 
         dirs = explorer.search_path_for_directories_with_partial_match(
-            path = os.path.dirname( PATH_TO_HERE ),
+            path = dirname( PATH_TO_HERE ),
             partial = 'match me if you can'
         )
         self.assertGreaterEqual( len( dirs ), 0 )
