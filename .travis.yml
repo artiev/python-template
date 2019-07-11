@@ -13,7 +13,8 @@ install:
   - "pip install codecov"
 
 script:
+  - "make check PYTHON=\"python\""
   - "make coverage PYTHON=\"python\""
 
 after_success:
-  - codecov
+  - "codecov"
