@@ -18,7 +18,7 @@ sphinx_bootstrap_theme
 # -----------------------------
 # Project specific dependencies
 # -----------------------------
-# click
+click
 # flask
 # gunicorn
 # matplotlib
