@@ -56,6 +56,12 @@ test: clean
 	@${PRINT_SUBTITLE_HLINE} "Compiling code coverage statistics"
 	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage report -m
 
+test-templates: clean
+	@${PRINT_TITLE_HLINE} "Running only template tests"
+
+	@${PRINT_SUBTITLE_HLINE}  "Running template unit tests"
+	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m pytest test/collection_template_sanity.py
+
 coverage: test
 	@${PRINT_TITLE_HLINE} "Computing Coverage"
 
