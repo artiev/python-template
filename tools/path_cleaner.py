@@ -13,6 +13,7 @@ from tools.path_explorer import search_path_for_directories_with_partial_match
 
 @click.group()
 def cli() -> None:
+    # pylint: disable=missing-docstring
     pass
 
 
@@ -39,7 +40,7 @@ def clear_cache_files( path: str ) -> None:
         try:
             os.unlink( filepath )
             status = 'OK'
-        except Exception as err:  # pylint: disable=wide-except
+        except Exception as err:  # pylint: disable=broad-except
             additional = '--> ' + str( err )
 
         template = 'Deleting  `{path}`: {status} {additional}'
@@ -73,7 +74,7 @@ def clear_cache_folders_if_empty( path: str ) -> None:
         try:
             os.rmdir( folderpath )
             status = 'OK'
-        except Exception as err:  # pylint: disable=wide-except
+        except Exception as err:  # pylint: disable=broad-except
             additional = '--> ' + str( err )
 
         template = 'Deleting  `{path}`: {status} {additional}'
@@ -86,6 +87,7 @@ def clear_cache_folders_if_empty( path: str ) -> None:
         )
 
 
+# pylint: disable=unused-argument
 @cli.command()
 @click.argument( 'path' )
 @click.pass_context
