@@ -2,8 +2,9 @@ coverage:
   status:
     project:
       default: false
+      patch: false
       tests:
-        paths: "tests/"
+        paths: "test/"
         target: 100%
       app:
         paths: "app/"
