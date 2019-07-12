@@ -16,12 +16,14 @@ def print_title_hline( title: str ) -> None:
     on the right hand side.
     """
 
-    print_text_in_hline(
+    hline = build_text_in_hline(
         title.upper(),
         bold = True,
         justify = True,
         position = CENTER
     )
+
+    print( hline )
 
 
 @cli.command()
@@ -32,18 +34,20 @@ def print_subtitle_hline( subtitle: str ) -> None:
     in the center of the line.
     """
 
-    print_text_in_hline(
+    hline = build_text_in_hline(
         subtitle,
         justify = True,
         position = CENTER
     )
 
+    print( hline )
 
-def print_text_in_hline( title: str,
+
+def build_text_in_hline( title: str,
                          bold = False,
                          position: int = LEFT,
                          terminal_length = 80,
-                         justify = False ) -> None:
+                         justify = False ) -> str:
     """
     Multipurpose function printing horizontal line while embedding some text
     in the resulting string. The line can be bold, and the text can be placed
@@ -61,7 +65,8 @@ def print_text_in_hline( title: str,
         terminal_length )
 
     output = line[:left_index] + ' ' + title + ' ' + line[right_index:]
-    print( output )
+
+    return output
 
 
 def compute_title_placement_indices( position: int,
