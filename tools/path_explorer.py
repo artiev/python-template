@@ -56,7 +56,7 @@ def search_path_for_directories_with_partial_match(
 
 
 def search_path_for_files_with_extensions(
-        path: str, extensions: tuple ) -> list:
+        path: str, extensions: set ) -> list:
     """
     Gets results for the path explorer, and filters out only the files with an
     extension matching any of the list provided.
