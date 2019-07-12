@@ -49,6 +49,7 @@ def search_path_for_directories_with_partial_match(
     on the complete absolute path for a partial match to the provided string.
     """
 
+    # pylint: disable=unused-variable
     dirs, files = search_path_for_directories_and_files(
         path,
         omit_python_cache = False
@@ -65,6 +66,7 @@ def search_path_for_files_with_extensions(
     extension matching any of the list provided.
     """
 
+    # pylint: disable=unused-variable
     dirs, files = search_path_for_directories_and_files(
         path,
         omit_python_cache = False

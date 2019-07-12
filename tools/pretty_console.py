@@ -6,6 +6,7 @@ LEFT, CENTER, RIGHT = range( 3 )
 
 @click.group()
 def cli() -> None:
+    # pylint: disable=missing-docstring
     pass
 
 
