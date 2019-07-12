@@ -1,6 +1,5 @@
 [run]
 branch = True
-omit = test*
 source = ./
 
 [report]
