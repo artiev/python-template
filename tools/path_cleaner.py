@@ -12,7 +12,8 @@ from tools.path_explorer import search_path_for_directories_with_partial_match
 
 
 @click.group()
-def cli() -> None: pass
+def cli() -> None:
+    pass
 
 
 @cli.command()
