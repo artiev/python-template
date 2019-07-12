@@ -1,14 +1,15 @@
 coverage:
   status:
+    patch: no
+    changes: no
     project:
       default: false
-      patch: false
-      tests:
-        paths: "test/"
-        target: 100%
       app:
         paths: "app/"
         target: 75%
+      tests:
+        paths: "test/"
+        target: 100%
       tools:
         paths: "tools/"
         target: 85%
