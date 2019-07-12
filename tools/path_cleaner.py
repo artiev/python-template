@@ -1,3 +1,9 @@
+"""
+This library relies on the path_explorer tool to find and remove python
+cache files and folders. It offers a command line interface and should not be
+called as a python module.
+"""
+
 import os
 import click
 
@@ -12,6 +18,11 @@ def cli() -> None: pass
 @cli.command()
 @click.argument( 'path' )
 def clear_cache_files( path: str ) -> None:
+    """
+    Walk through the given path, looking for *.py[cod] cache files, and tries
+    to delete all of them.
+    """
+
     cache_extensions = ('pyc', 'pyo', 'pyd')
 
     file_path_list = search_path_for_files_with_extensions(
@@ -43,6 +54,11 @@ def clear_cache_files( path: str ) -> None:
 @cli.command()
 @click.argument( 'path' )
 def clear_cache_folders_if_empty( path: str ) -> None:
+    """
+    Walk through the given path, looking for __pycache__ folders, and tries
+    to delete all of them, but only if they are empty.
+    """
+
     folder_path_list = search_path_for_directories_with_partial_match(
         path,
         partial = '__pycache__'
@@ -73,6 +89,10 @@ def clear_cache_folders_if_empty( path: str ) -> None:
 @click.argument( 'path' )
 @click.pass_context
 def clear_all_cache( ctx, path: str ) -> None:
+    """
+    Entry point for cleaning files and then folders in one CLI call.
+    """
+
     ctx.forward( clear_cache_files )
     ctx.forward( clear_cache_folders_if_empty )
 
