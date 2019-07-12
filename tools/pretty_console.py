@@ -1,5 +1,5 @@
-import click
 import shutil
+import click
 
 LEFT, CENTER, RIGHT = range( 3 )
 
