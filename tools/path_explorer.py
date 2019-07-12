@@ -45,7 +45,7 @@ def search_path_for_directories_and_files(
 def search_path_for_directories_with_partial_match(
         path: str, partial: str ) -> list:
     """
-    Gets results from the path explorer, and does a simple string camparison
+    Gets results from the path explorer, and does a simple string comparison
     on the complete absolute path for a partial match to the provided string.
     """
 
