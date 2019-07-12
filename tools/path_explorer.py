@@ -49,7 +49,10 @@ def search_path_for_directories_with_partial_match(
     on the complete absolute path for a partial match to the provided string.
     """
 
-    dirs, files = search_path_for_directories_and_files( path )
+    dirs, files = search_path_for_directories_and_files(
+        path,
+        omit_python_cache = False
+    )
     dirs[:] = [dir for dir in dirs if partial in dir]
 
     return dirs
@@ -62,7 +65,10 @@ def search_path_for_files_with_extensions(
     extension matching any of the list provided.
     """
 
-    dirs, files = search_path_for_directories_and_files( path )
+    dirs, files = search_path_for_directories_and_files(
+        path,
+        omit_python_cache = False
+    )
     files[:] = [file for file in files if file.split( '.' ).pop() in extensions]
 
     return files
