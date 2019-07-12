@@ -1,3 +1,8 @@
+"""
+A small command line interface to help spit out messages in the console with
+better formatting. For example, by embedding some text in a horizontal line.
+"""
+
 import shutil
 import click
 
