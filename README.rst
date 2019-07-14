@@ -12,6 +12,8 @@ Python Project Template
     Arthur Van de Wiele
 :Project Home:
     https://github.com/artiev/python-template
+:Documentation:
+    `doc/ <doc/>`_
 
 
 This small project aims at offering a personal take on formalizing python 
@@ -38,14 +40,3 @@ Template's features
     provided, and relies on the aforementioned unit tests and coverage.
 :Custom Tools & Scripts:
     Some extra tools are provided for ease of life.
-
-More documentation
-------------------
-
-:Code Conventions:
-    | Explanations about used code conventions.
-    | See `doc/conventions/ <doc/conventions/>`_
-
-:Tools:
-    | More information about the tools provided by the template.
-    | See `doc/tools/ <doc/tools/>`_
