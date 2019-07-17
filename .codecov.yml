@@ -9,7 +9,7 @@ coverage:
         target: 75%
       tests:
         paths: "test/"
-        target: 100%
+        target: 95%
       tools:
         paths: "tools/"
         target: 85%
