@@ -8,6 +8,10 @@ which are hence not enforced in the linter's configuration (see `.pylintrc`).
 
 In particular, the following conventions are disables by default:
 
+- `bad-whitespace`_
+- `len-as-condition`_
+- `no-name-in-module`_
+
 bad-whitespace
 --------------
 One reason for me to disable the **bad-whitespace** warnings is the way I write functions definitions and calls, and mathematical formulae. I'd simply call it 'adding negative space' - the absence of code - to enhance readability. The **bad-whitespace** would trigger multiple warnings in the following code.
