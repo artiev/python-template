@@ -10,6 +10,7 @@ pylint
 coverage
 pytest
 pytest-dependency
+pytest-html
 
 # -------------
 # Documentation
