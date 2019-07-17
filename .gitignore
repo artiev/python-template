@@ -16,7 +16,7 @@ __pycache__/
 .coverage
 .coverage.*
 .pytest_cache/
-coverage/
+reports/
 
 # -------------
 # Documentation
