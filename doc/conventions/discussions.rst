@@ -112,9 +112,19 @@ This seems arbitrary, but in practice, there are quite a few things happening (a
 
     Now, for most people, this being an empty file, it does not really matter. But I have seen (and on occasion even used) ``__init__.py`` files to restrict the import scopes of a module by manually overwriting the ``__all__`` attribute, in other words, redefining a module's exposed functions and objects.
 
-    You guess where I'm going with this ? Well, I'm being supplied a library, I'm looking into the code, and find the perfect function, so I import my module, and call 'module.function' somewhere down, and... and nothing, it fails because ``__init__.py`` did something I did not expect.
+    .. code-block:: python
 
-    Don't get me wrong, it's a very nice way to differentiate 'public' and 'private' functions or objects for third parties, but it contradicts my approach to software development: code should only do what it's supposed to do.
+        # __init__.py
+
+        from .submodule import public_function
+        from .defines import PUBLIC_SET
+        from .lib.oop import PublicObject
+
+        __all__ = ['public_function', 'PUBLIC_SET', 'PublicObject']
+
+    You guess where I'm going with this ? Well, I'm being supplied a library and was told to only use the 'public' interface, I'm looking into the code, and find the perfect function, so I import my module, and call 'module.function' somewhere down, and... and nothing, it fails because ``__all__`` did not expose that particular function.
+
+    Don't get me wrong, it's a very nice way to differentiate 'public' and 'private' functions or objects for third parties, but it contradicts my approach to software development: code should only do what it's supposed to do. And in Python, everything is public, so don't break expectations.
 
 :Clutter:
     Last but not least, I do my best to divide my project's codes in small and contained libraries. You know, to keep things clean and modular. So I have many folders and files, and I'm working in the  console, so I call ``tree``:
