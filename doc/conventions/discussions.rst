@@ -69,7 +69,9 @@ If you'd like to be thorough, then, I do agree that ``if len(some_list): pass`` 
 no-name-in-module
 -----------------
 
-Ok, I guess this is going to be the most controversial point, but I'm tired of the ``__init__.py`` files cluttering my directories. So I only use them sparsely, but the linter does no always react in the best of ways (yet?). Regular modules increase the risk of side effects you can purposely - or not - introduce in libraries. Now, not letting Python know what module is a module only works if your import scheme are consistent with an certain approach:
+Ok, I guess this is going to be the most controversial point, but I'm tired of the ``__init__.py`` files cluttering my directories. So I only use them sparsely since Python 3.3, but the linter does no always react in the best of ways (yet?) and throws me a bunch of **no-name-in-module** warnings.
+
+Regular modules increase the risk of side effects you can purposely - or not - introduce in libraries. Now, not letting Python know what module is a module only works if your import scheme are consistent with an certain approach:
 
 - Use absolute imports for all your custom libraries
 - Only allow importing an entire module for the standard libraries
