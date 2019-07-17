@@ -6,4 +6,4 @@ source = ./
 ignore_errors = True
 
 [html]
-directory = coverage/html/
+directory = reports/coverage

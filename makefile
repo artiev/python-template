@@ -36,8 +36,8 @@ clean: .PHONY
 	@if [ -f ".coverage" ]; then \
 		rm .coverage; \
 	fi
-	@if [ -d "coverage" ]; then \
-		rm -r coverage; \
+	@if [ -d "reports" ]; then \
+		rm -r reports; \
 	fi
 	@if [ -d ".pytest_cache" ]; then \
 		rm -r .pytest_cache; \
