@@ -4,10 +4,12 @@
 pyenchant
 pylint
 
-# -------------
-# Code Coverage
-# -------------
+# -------------------------
+# Code Coverage and Testing
+# -------------------------
 coverage
+pytest
+pytest-dependency
 
 # -------------
 # Documentation
