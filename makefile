@@ -54,7 +54,7 @@ test: clean
 	@${PRINT_TITLE_HLINE} "Running All Tests"
 
 	@${PRINT_SUBTITLE_HLINE} "Running all unit tests gathered from the test/ folder"
-	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage run -m pytest test/
+	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage run -m pytest -rx --durations=3 test/
 
 	@${PRINT_SUBTITLE_HLINE} "Compiling code coverage statistics"
 	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage report -m
@@ -63,7 +63,7 @@ test-templates: clean
 	@${PRINT_TITLE_HLINE} "Running only template tests"
 
 	@${PRINT_SUBTITLE_HLINE}  "Running template unit tests"
-	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m pytest test/test_tools/
+	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m pytest -rx --durations=3 test/test_tools/
 
 coverage: test
 	@${PRINT_TITLE_HLINE} "Computing Coverage"
