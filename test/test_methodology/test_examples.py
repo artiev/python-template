@@ -3,6 +3,11 @@ So, there is a few things you should consider when using this template, and
 testing is one of them. Find below some quick example of how you can build a
 smarter test suit. This examples are more about the process than about the
 tests themselves, because I'm sure you can write a test already.
+
+.. warning::
+    It's crucial in test dependencies that ht e dependency be placed
+    BEFORE the dependent. Otherwise, the dependent will always be skipped.
+    See https://github.com/RKrahl/pytest-dependency/issues/20
 """
 
 from time import sleep
@@ -10,7 +15,7 @@ from time import sleep
 import pytest
 
 
-class TestGeneralEnvironemnt():
+class TestGeneralEnvironemnt:
 
     @pytest.mark.xfail( reason = 'Negative testing is always an option.' )
     def test_purposefully_failing( self ):
@@ -36,11 +41,11 @@ class TestGeneralEnvironemnt():
     @pytest.mark.dependency( depends = ('test_crucial_dependency') )
     def test_only_if_dependency_is_ok( self ):
         """
-        As expected, this test is going to be skipped, bacause I purposefully
+        As expected, this test is going to be skipped, because I purposefully
         failed the dependency test.
         """
 
-        assert False  # is not going to fail, just be skipped.
+        pass
 
     def test_a_very_slow_process( self ):
         """
