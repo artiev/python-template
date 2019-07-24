@@ -15,7 +15,7 @@ from time import sleep
 import pytest
 
 
-class TestGeneralEnvironemnt:
+class TestGeneralEnvironment:
 
     @pytest.mark.xfail( reason = 'Negative testing is always an option.' )
     def test_purposefully_failing( self ):
@@ -38,7 +38,8 @@ class TestGeneralEnvironemnt:
 
         assert False
 
-    @pytest.mark.dependency( depends = ('test_crucial_dependency') )
+    @pytest.mark.dependency(
+        depends = ['TestGeneralEnvironment::test_crucial_dependency'] )
     def test_only_if_dependency_is_ok( self ):
         """
         As expected, this test is going to be skipped, because I purposefully
