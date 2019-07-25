@@ -1,5 +1,7 @@
-Code Conventions
-================
+.. _section-disabled-linter-warnings:
+
+Discussing disabled linter warnings
+===================================
 
 I - the template's author - follow most of the PEP8 recommendations. But 
 there are some rules which I consider diminishing read-ability of the code, and 
