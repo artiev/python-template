@@ -1,16 +1,11 @@
 version: 2
 
 sphinx:
-  builder: html
   configuration: doc/static/conf.py
-  fail_on_warning: true
 
-formats:
-  - epub
-  - pdf
+formats: all
 
 python:
   version: 3.7
   install:
-    - method: pip
     - requirements: requirements.txt
