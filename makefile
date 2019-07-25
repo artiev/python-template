@@ -43,8 +43,8 @@ clean: .PHONY
 	@if [ -d "reports" ]; then \
 		rm -r reports; \
 	fi
-	@if [ -d ".pytest_cache" ]; then \
-		rm -r .pytest_cache; \
+	@if [ -d "test/.pytest_cache" ]; then \
+		rm -r test/.pytest_cache; \
 	fi
 	@echo "Done."
 
@@ -60,9 +60,6 @@ test: clean
 	@${PRINT_SUBTITLE_HLINE} "Running all unit tests gathered from the test/ folder"
 	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage run -m pytest test/
 
-	@${PRINT_SUBTITLE_HLINE} "Compiling code coverage statistics"
-	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage report -m
-
 test-templates: clean
 	@${PRINT_TITLE_HLINE} "Running only template tests"
 
@@ -72,5 +69,8 @@ test-templates: clean
 coverage: test
 	@${PRINT_TITLE_HLINE} "Computing Coverage"
 
-	@${PRINT_SUBTITLE_HLINE}  "Building coverage report"
+	@${PRINT_SUBTITLE_HLINE}  "Building HTML coverage report"
 	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage html
+
+	@${PRINT_SUBTITLE_HLINE} "Compiling code coverage statistics"
+	PYTHONPATH=$(ROOT_DIR) ${PYTHON} -m coverage report -m
