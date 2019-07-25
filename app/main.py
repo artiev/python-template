@@ -1,11 +1,24 @@
 """
-This is an empty file for the template.
+The main.py file is currently used for demonstration only within this project,
+in order to offer a standard entry point to the whole template.
+
+The structure of the app itself is not predefined, and different apps will
+present different structures, hence the freedom.
+
+In this example, the main file is supposed to be called directly from an
+interpreter which will call the main() function.
+
+.. code-block:: python
+
+    if __name__ == '__main__':
+        main()
+
 """
 
 
 def fibonacci( index: int ) -> int:
     """
-    Computes the Fibonacci number for a given index.
+    Computes the Fibonacci number for a given index through recursion.
     """
 
     result = None
@@ -22,7 +35,20 @@ def fibonacci( index: int ) -> int:
 
 def main() -> None:
     """
-    This is where the magic happens.
+    The main function within this example simply computes the first ten digits
+    of the Fibonacci sequence.
+
+    .. warning::
+        Using a recursive function in this instance is a waste of resources,
+        but this is just an example.
+
+    The Fibonacci number have an interesting mathematical significance, and
+    have many applications.
+
+    .. note::
+        See https://en.wikipedia.org/wiki/Fibonacci_number for more on
+        the Fibonacci numbers.
+
     """
 
     print( 'Computing the first 10 digits of the Fibonacci sequence:' )
