@@ -18,6 +18,10 @@ install: .PHONY
 	@${PRINT_TITLE_HLINE} "Installing dependencies"
 	${PIP} install --user -r requirements.txt
 
+doc: .PHONY
+	@${PRINT_TITLE_HLINE} "Building Documentation"
+	${PYTHON} -m sphinx -b html doc/static doc/build
+
 clean: .PHONY
 	@${PRINT_TITLE_HLINE} "Cleaning project"
 
