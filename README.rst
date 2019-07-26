@@ -30,13 +30,16 @@ development cycles and let you focus on what matters.
 :Code Syntax Check:
     Code quality is enforced using ``pylint``
 :Unit Testing:
-    A ``test/`` folder is colelction unit tests, and ``pytest`` in
-    conjunction with ``unittest`` libraries can be used to write tests.
+    A ``test/`` folder collects unit tests, and ``pytest`` in
+    conjunction with ``unittest`` libraries can be used to write and
+    execute these tests.
 :Code Coverage:
-    Coverage of the unit tests is automatically compiled.
+    Coverage based on the unit tests is automatically compiled, and linked to
+    http://codecov.io
 :Dev Documentation:
     Developer's documentation can be extracted from the source code using
-    ``sphinx`` and rendered in html format.
+    ``sphinx`` and rendered in html format, and is integrated with
+    https://readthedocs.io for automated doc builds.
 :Continuous Integration:
     All configuration files for using ``Travis`` and ``Codecov`` is already
     provided, and relies on the aforementioned unit tests and coverage.
