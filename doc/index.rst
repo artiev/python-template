@@ -32,18 +32,25 @@ Table of Content
 
 .. toctree::
     :maxdepth: 3
-    :caption: Static Documentation:
+    :caption: App's Documentation:
 
-    ci/index.rst
-    conventions/index.rst
-    tools/index.rst
+    project/index.rst
+
+.. toctree::
+    :maxdepth: 3
+    :caption: Template's Documentation:
+
+    template/ci/index.rst
+    template/conventions/index.rst
+    template/tools/index.rst
 
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Developper's Documentation:
+    :maxdepth: 4
+    :caption: Code Stubs (auto-generated)
 
-   project/index.rst
+    stubs/modules.rst
+
 
 Indices and tables
 ==================
