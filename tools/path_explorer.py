@@ -1,7 +1,7 @@
 """
-The explorer module is designed to help locate and filter and folders files
-within the directory structure. It is not restricted to the local project, so
-expose/use with caution.
+The path explorer module is designed to help locate and filter and folders
+files within the directory structure. It is not restricted to the local project,
+so expose/use with caution.
 """
 
 import os
