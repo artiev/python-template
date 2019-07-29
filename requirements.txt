@@ -1,22 +1,22 @@
 # ----------------------------------
 # Code linter and code quality tools
 # ----------------------------------
-pyenchant
-pylint
+pyenchant >= 2.0
+pylint >= 2.3
 
 # -------------------------
 # Code Coverage and Testing
 # -------------------------
-coverage
-pytest
-pytest-dependency
-pytest-html
+coverage >= 4.5
+pytest >= 5.0
+pytest-dependency >= 0.4
+pytest-html >= 1.21
 
 # -------------
 # Documentation
 # -------------
-sphinx
-sphinx_rtd_theme
+sphinx >= 2.1
+sphinx_rtd_theme >= 0.4
 
 # -----------------------------
 # Project specific dependencies
