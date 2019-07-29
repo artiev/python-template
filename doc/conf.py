@@ -14,8 +14,10 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../..'))
 
+sys.path.insert( 0, os.path.abspath( '../app' ) )
+sys.path.insert( 0, os.path.abspath( '../test' ) )
+sys.path.insert( 0, os.path.abspath( '../tools' ) )
 
 # -- Project information -----------------------------------------------------
 
@@ -44,7 +46,16 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.viewcode',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.inheritance_diagram',
+    'sphinx.ext.graphviz',
+    'sphinxcontrib.apidoc',
 ]
+
+# Auto API documentation
+
+apidoc_module_dir = '../app'
+apidoc_output_dir = 'stubs/'
+apidoc_separate_modules = True
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']

@@ -17,6 +17,7 @@ pytest-html >= 1.21
 # -------------
 sphinx >= 2.1
 sphinx_rtd_theme >= 0.4
+sphinxcontrib-apidoc >= 0.3
 
 # -----------------------------
 # Project specific dependencies
