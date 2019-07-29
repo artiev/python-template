@@ -20,7 +20,7 @@ install: .PHONY
 
 doc: .PHONY
 	@${PRINT_TITLE_HLINE} "Building Documentation"
-	${PYTHON} -m sphinx -b html doc/static doc/build
+	${PYTHON} -m sphinx -W -b html doc/static doc/build
 
 clean: .PHONY
 	@${PRINT_TITLE_HLINE} "Cleaning project"
