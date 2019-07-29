@@ -21,3 +21,4 @@ https://readthedocs.io is ready to be established.
     linter.rst
     unittest.rst
     documentation.rst
+    custom.rst
