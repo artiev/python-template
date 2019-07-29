@@ -24,7 +24,7 @@ copyright = '2019, Arthur Van de Wiele'
 author = 'Arthur Van de Wiele'
 
 # The short X.Y version
-version = 'pre-release'
+version = 'local-build'
 # The full version, including alpha/beta/rc tags
 release = ''
 
