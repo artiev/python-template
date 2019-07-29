@@ -21,7 +21,7 @@ def cli() -> None:
 @click.argument( 'path' )
 def clear_cache_files( path: str ) -> None:
     """
-    Walk through the given path, looking for *.py[cod] cache files, and tries
+    Walk through the given path, looking for .py[cod] cache files, and tries
     to delete all of them.
     """
 
