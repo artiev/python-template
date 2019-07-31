@@ -29,7 +29,7 @@ documentation, or internal documentation in general.
     :maxdepth: 4
 
     starter-kit/structure.rst
-    starter-kit/state-machine.rst
+    starter-kit/flow-diagram.rst
     starter-kit/mod-main.rst
 
 
