@@ -1,6 +1,3 @@
-Custom tools
-============
-
 This template is built upon as many standardized libraries and modules in order
 to provide stability and state-of-the-art features relying on the great work of
 other projects.
@@ -11,10 +8,11 @@ for the job is worth it. This is the case for the following scripts/tools,
 which are not standard.
 
 Python Project Cleaner
-----------------------
+======================
 
 Introduction
-''''''''''''
+------------
+
 As the name suggests, this collection of function and scripts helps you keep a
 clean project tree. For me, this allows me to work in the console better, by
 letting me clean all python cache files and folders in a single command, hence
@@ -82,7 +80,7 @@ them all. So that navigating the project looks more like:
     by the makefile during the cleaning process.
 
 How to clean the project tree
-'''''''''''''''''''''''''''''
+-----------------------------
 
 Generally speaking, most of the template's tools are exposed through the
 makefile. In this instance, simply run:
@@ -120,8 +118,8 @@ You can always get an up-to-date feature description from calling:
 
     More about the `click` library at https://click.palletsprojects.com/en/
 
-Developper's documentation
-''''''''''''''''''''''''''
+Developer's documentation
+-------------------------
 
 .. automodule:: path_cleaner
     :members:

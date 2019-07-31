@@ -14,4 +14,3 @@ configuration, and also about project structures in general.
     :caption: Table of Content:
 
     discussions.rst
-    project.rst
