@@ -1,0 +1,30 @@
+digraph sm {
+    size = "5,8"
+    overlap = False
+    pad = 1
+
+    node [ shape = rectangle ]
+    start [ label = "start" ]
+    exit [ label = "exit" ]
+
+    node [ shape = circle ]
+    main [ label = "main()" ]
+    init [ label = "n = 0" ]
+    increment [ label = "n += 1" ]
+    { rank = same; increment }
+    fib [ label = "fibonacci(n)" ]
+
+
+    start -> main
+    main -> init [ label="init" ]
+    init -> fib
+    increment -> fib
+    fib -> increment [ label = "n < 10" ]
+    fib -> exit [ label = "n == 10" ]
+
+    {
+    rank = same;
+    fib -> increment [ style=invis ];
+    rankdir = LR;
+    }
+}
