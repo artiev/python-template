@@ -55,7 +55,9 @@ extensions = [
 # Auto API documentation
 
 apidoc_module_dir = '../app'
+apidoc_excluded_paths = []
 apidoc_output_dir = 'stubs/'
+apidoc_toc_file = 'index'
 apidoc_separate_modules = True
 
 # Add any paths that contain templates here, relative to this directory.
