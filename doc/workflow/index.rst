@@ -1,4 +1,4 @@
-.. _chap-workflow:
+.. _chapter-workflow:
 
 Workflow
 ========
