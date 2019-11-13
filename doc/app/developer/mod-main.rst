@@ -1,5 +1,5 @@
-The main() function: an entry point
-===================================
+Important parts of your code
+============================
 
 Most of the time, one function should be the entry point of your application. In
 this instance, I use C as an inspiration for standardizing the use of the
