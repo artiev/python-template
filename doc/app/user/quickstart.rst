@@ -22,7 +22,7 @@ Link: https://github.com/artiev/python-template/
 Main features
 =============
 
-See :ref:`chap-workflow` and :ref:`chapter-standard-tools` for a complete
+See :ref:`chapter-workflow` and :ref:`chapter-standard-tools` for a complete
 description of the supported features.
 
 Screenshots
