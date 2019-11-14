@@ -12,4 +12,3 @@ oriented toward a user, not a developer.
 
     user/index.rst
     developer/index.rst
-

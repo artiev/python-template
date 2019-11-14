@@ -130,4 +130,3 @@ Developer's documentation
 
 .. automodule:: path_explorer
     :members:
-

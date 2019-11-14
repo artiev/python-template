@@ -15,4 +15,3 @@ top of the normal code.
 .. note::
     For more info on linting in python, see
     https://pylint.readthedocs.io/en/latest/tutorial.html.
-
