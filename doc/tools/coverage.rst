@@ -55,7 +55,7 @@ Additionally, the coverage routine also generates an HTML report (see
 `reports/coverage/index.html`) which has the added benefit of highlighting
 the code statements executed and skipped.
 
-.. figure:: ../assets/coverage/coverage_html_report.png
+.. figure:: assets/coverage/coverage_html_report.png
     :alt: Example of highlighted statements.
     :align: center
     :width: 80%
@@ -79,14 +79,14 @@ increasing or decreasing.
 This is achieved through a configuration file `.codecov.yml` located at the
 root of the project directory:
 
-.. literalinclude:: ../../../.codecov.yml
+.. literalinclude:: ../../.codecov.yml
     :caption: .codecov.yml
     :language: yaml
     :emphasize-lines: 7,10,13
 
 And a few special directives to the `.travis.yml`:
 
-.. literalinclude:: ../../../.travis.yml
+.. literalinclude:: ../../.travis.yml
     :caption: .travis.yml
     :language: yaml
     :emphasize-lines: 13,19-20
@@ -95,21 +95,21 @@ Therefore, the continuous integration build is also setup to upload code
 coverage statistics to Codecov.io automatically if the build was successful. It
 has the added benefit of offering much better visualization of your coverage.
 
-.. figure:: ../assets/coverage/coverage_pie_example.png
+.. figure:: assets/coverage/coverage_pie_example.png
     :alt: Example 1 of code coverage pie displayed at codecov.io
     :align: center
     :width: 50%
 
     Coverage 'Pie' for the complete project.
 
-.. figure:: ../assets/coverage/coverage_pie_example_2.png
+.. figure:: assets/coverage/coverage_pie_example_2.png
     :alt: Example 2 of code coverage pie displayed at codecov.io
     :align: center
     :width: 50%
 
     Coverage 'Pie' for the test/ folder.
 
-.. figure:: ../assets/coverage/coverage_pie_example_3.png
+.. figure:: assets/coverage/coverage_pie_example_3.png
     :alt: Example 3 of code coverage pie displayed at codecov.io
     :align: center
     :width: 50%
@@ -128,7 +128,7 @@ One of the main advantages to this approach is that you can extrapolate
 of not your CI status is a pass or a fail, for example while preparing a new
 pull request (if you have linked Travis and Codecov to your github project).
 
-.. figure:: ../assets/coverage/github_checks_passed.png
+.. figure:: assets/coverage/github_checks_passed.png
     :alt: Checks include coverage in github.
     :align: center
     :width: 80%

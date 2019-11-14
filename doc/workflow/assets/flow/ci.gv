@@ -1,0 +1,58 @@
+digraph sm {
+    size = "5,8"
+    overlap = False
+    pad = 1
+
+    node [shape = rectangle]
+    branch [label = "Branch Out"]
+    code [label = "Develop"]
+    { rank = same; code }
+    localtest [label = "Test"]
+    { rank = same; code }
+    commit [label = "Commit"]
+    pullreq [label = "Pull Request"]
+
+    node [shape = circle]
+    travis [label = "travis.org"]
+    { rank = same; travis }
+    rtd [label = "readthedoc.io"]
+    codecov [label = "codecov.io"]
+
+    node [shape = rectangle]
+    lint [labl = "Lint"]
+    test [label = "Run Tests"]
+    doc [label = "Build Documentation"]
+    cov [label = "Record Coverage"]
+    pass [label = "Pass"]
+    rebase [label = "Rebase"]
+
+
+    branch -> code
+    branch -> localtest
+    branch -> commit
+    commit -> pullreq
+    pullreq -> travis
+    pullreq -> rtd
+    travis -> lint
+    travis -> test
+    travis -> doc
+    travis -> cov
+    lint -> pass
+    test -> pass
+    doc -> pass
+    cov -> codecov
+    codecov -> pass
+    pass -> rebase
+
+    {
+    rank = same;
+    travis -> rtd [style = invis];
+    rankdir = LR;
+    }
+    {
+    rank = same;
+    lint -> test -> doc -> cov [style = invis];
+    rankdir = LR;
+    }
+
+}
