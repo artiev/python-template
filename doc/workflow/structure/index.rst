@@ -15,5 +15,6 @@ on the application itself and your architectural decisions.
 
 .. toctree::
     :maxdepth: 4
+    :caption: Table of Content:
 
     namespaces.rst
