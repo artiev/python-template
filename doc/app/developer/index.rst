@@ -1,3 +1,5 @@
+.. _chapter-developper-documentation:
+
 Developer's Documentation
 =========================
 
