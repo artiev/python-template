@@ -11,7 +11,7 @@ gates using https://travis-ci.org and https://codecov.io platforms. Other chapte
 offer discussions about the reasons for all these configurations.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 4
     :caption: Table of Content:
 
     travis_codecov.rst

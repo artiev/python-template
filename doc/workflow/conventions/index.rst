@@ -10,7 +10,7 @@ This chapter offers a few insights on some of the decisions taken during this
 configuration, and also about project structures in general.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 4
     :caption: Table of Content:
 
     discussions.rst
