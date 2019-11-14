@@ -20,4 +20,3 @@ published alongside the quick-start guides and user documentation.
     structure.rst
     flow-diagram.rst
     mod-main.rst
-
