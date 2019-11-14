@@ -1,3 +1,5 @@
+.. _chapter-user-documentation:
+
 User Documentation
 ==================
 

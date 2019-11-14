@@ -38,10 +38,15 @@ Table of Content
 
 .. toctree::
     :maxdepth: 3
-    :caption: Workflow, Tools & Template:
+    :caption: Workflow & Template:
 
     workflow/index.rst
 
+.. toctree::
+    :maxdepth: 3
+    :caption: Tools:
+
+    tools/index.rst
 
 .. toctree::
     :maxdepth: 3
