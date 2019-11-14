@@ -1,5 +1,9 @@
+# This file is used to configure your git instance with your user name and
+# you email. It is useful if you do not have a global git configuration, or
+# if you need to create your commits with a dedicated user for a specific
+# repository.
 
-echo "Configuring user info."
+echo "Configuring user info. Ctrl+C to cancel."
 
 read -p "Your name: " name
 git config user.name "$name"
